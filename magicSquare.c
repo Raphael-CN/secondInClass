@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
 
 int getTotal(int arr[][3])
 {
@@ -93,7 +95,35 @@ bool check(int arr[][3])
 int main()
 {
   int testOne[3][3] = {{4, 9, 2}, {3, 5, 7}, {8, 1, 6}};
+  for(int i = 0; i < 3; i++)
+  {
+    for(int j = 0; j < 3; j++)
+    {
+      printf("%d ", testOne[i][j]);
+    }
+    printf("\n");
+  }
   bool testOneCheck = check(testOne);
   printf("Test One: %s\n", testOneCheck ? "true" : "false");
+
+  int testTwo[3][3] = {{4, 9, 1}, {3, 5, 7}, {8, 1, 6}};
+  for(int i = 0; i < 3; i++)
+  {
+    for(int j = 0; j < 3; j++)
+    {
+      printf("%d ", testTwo[i][j]);
+    }
+    printf("\n");
+  }
+  bool testTwoCheck = check(testTwo);
+  printf("Test Two: %s\n", testTwoCheck ? "true" : "false");
+
+  printf("Randomly Generated Square:\n");
+  int randArray[9];
+  time_t  t;
+  srand((unsigned) time(&t)); /* seed is determined at run-time by the system */
+
+  for (int i = 0; i < 9; i++)
+    printf("%d ", randArray[i]);
   return 0;
 }
