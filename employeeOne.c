@@ -1,5 +1,6 @@
 #include <string.h>
 #include "employee.h"
+#include <math.h>
 
 PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int tableSize, long targetNumber)
 {
@@ -43,7 +44,7 @@ PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, doub
 
   for(; ptr < endPtr; ptr++)
   {
-    if (fabs((ptr->salry) - targetSalary) < 0.00001)
+    if (fabs((ptr->salary) - targetSalary) < 0.00001)
       return (PtrToEmployee) ptr;
   }
   return NULL;

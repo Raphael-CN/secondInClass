@@ -11,4 +11,4 @@ Employee EmployeeTable[] =
   {5045l, "Brian Height", "714-555-2749", 8.32}
 };
 
-const int EmployeeTableEntrie = sizeof(EmployeeTable)/sizeof(EmployeeTable[0]);
+const int EmployeeTableEntries = sizeof(EmployeeTable)/sizeof(EmployeeTable[0]);
