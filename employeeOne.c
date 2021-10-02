@@ -37,13 +37,13 @@ PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, char 
   return NULL;
 }
 
-PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int tableSize, double targetSalary)
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, double targetSalary)
 {
   const PtrToConstEmployee endPtr = ptr + tableSize;
 
   for(; ptr < endPtr; ptr++)
   {
-    if (ptr->salry == targetSalary)
+    if (fabs((ptr->salry) - targetSalary) < 0.00001)
       return (PtrToEmployee) ptr;
   }
   return NULL;
